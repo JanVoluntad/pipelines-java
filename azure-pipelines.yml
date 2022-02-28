@@ -56,7 +56,7 @@ stages:
                   # Modify deployment script based on the app type
                   echo "Starting deployment script run"
                   whoami
-                  sudo -b java -jar '$(Pipeline.Workspace)/drop/target/helloworld.war'
+                  sudo -b java -jar '$(Pipeline.Workspace)/drop/target/helloworld.jar'
           routeTraffic:
             steps:
             - script: echo routing traffic
